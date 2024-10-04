@@ -1,0 +1,81 @@
+Origin: evil.com
+Origin: null
+Origin: localhost
+Origin: google.com
+Origin: 127.0.0.1
+Referer: evil.com
+Referer: localhost
+Referer: evil.com
+Referer: https://google.com
+Referer: data:text/html,<script>alert(1)</script>
+X-Forwarded-For: 127.0.0.1
+X-Forwarded-For: localhost
+X-Forwarded-For: 192.168.1.1
+X-Forwarded-For: evil.com
+X-Forwarded-For: 10.0.0.1
+X-Forwarded-Host: evil.com
+X-Forwarded-Host: localhost
+X-Forwarded-Host: 127.0.0.1
+X-Forwarded-Host: evil.com
+X-Forwarded-Host: google.com
+X-Forwarded-Proto: http
+X-Forwarded-Proto: https
+X-Forwarded-Proto: ftp
+X-Real-IP: 127.0.0.1
+X-Real-IP: localhost
+X-Real-IP: 192.168.1.1
+X-Real-IP: google.com
+X-Real-IP: 10.0.0.1
+Authorization: Bearer malicious_token
+Authorization: Basic YWRtaW46cGFzc3dvcmQ=
+Authorization: Digest username="admin", realm="admin", nonce="malicious_nonce", uri="/protected", response="malicious_response"
+Authorization: NTLM malicious_ntlm_hash
+Cookie: sessionid=malicious_session
+Cookie: PHPSESSID=malicious_session
+Cookie: csrf_token=malicious_token
+Cookie: JSESSIONID=malicious_jsessionid
+Content-Type: application/json
+Content-Type: text/plain
+Content-Type: text/html
+Content-Type: application/x-www-form-urlencoded
+Content-Type: multipart/form-data
+Host: victim.com
+Host: 127.0.0.1
+Host: localhost
+Host: attacker.com
+Range: bytes=0-
+Range: bytes=0-100
+Range: bytes=-100
+X-Requested-With: XMLHttpRequest
+X-Requested-With: fetch
+X-Custom-IP-Authorization: 127.0.0.1
+X-Custom-IP-Authorization: localhost
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Frame-Options: SAMEORIGIN
+X-Custom-Header: value
+X-Custom-Header: another-value
+Forwarded: for=127.0.0.1; proto=https
+Forwarded: for=evil.com
+Forwarded: for=192.168.0.1
+TE: trailers
+Expect: 100-continue
+Cache-Control: no-cache
+Cache-Control: no-store
+Cache-Control: max-age=0
+Pragma: no-cache
+Pragma: no-store
+Pragma: no-cache
+DNT: 1
+DNT: 0
+Proxy-Authorization: Basic malicious_token
+If-None-Match: "malicious_etag"
+If-Modified-Since: Thu, 01 Jan 1970 00:00:00 GMT
+If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+If-Modified-Since: Fri, 01 Jan 2021 00:00:00 GMT
+If-None-Match: "abc123"
+If-None-Match: "xyz456"
+Accept-Encoding: gzip, deflate, br
+Accept: text/html
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
